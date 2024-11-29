@@ -25,7 +25,7 @@ def pregunta_09():
     39  39  E   5  1998-01-26  1998
 
     """
-    df = pd.read_csv(r"files\input\tbl0.tsv", sep="\t", encoding="utf-8")
+    df = pd.read_csv(r"files/input/tbl0.tsv", sep="\t", encoding="utf-8")
     df["year"] = df["c3"].apply(lambda x: x[:4])
     return df
 

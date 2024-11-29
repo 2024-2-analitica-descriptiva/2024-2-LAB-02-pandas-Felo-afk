@@ -24,7 +24,7 @@ def pregunta_11():
     38   38      d,e
     39   39    a,d,f
     """
-    df = pd.read_csv(r"files\input\tbl1.tsv", sep="\t", encoding="utf-8")
+    df = pd.read_csv(r"files/input/tbl1.tsv", sep="\t", encoding="utf-8")
     tabla = df.groupby("c0")["c4"].apply(lambda x: ",".join(sorted(x))).reset_index()
     return tabla
 

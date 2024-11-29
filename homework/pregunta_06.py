@@ -18,6 +18,6 @@ def pregunta_06():
 
     """
 
-    df = pd.read_csv(r"files\input\tbl1.tsv", sep="\t", encoding="utf-8")
+    df = pd.read_csv(r"files/input/tbl1.tsv", sep="\t", encoding="utf-8")
     valores_unicos = sorted(df["c4"].str.upper().unique())
     return valores_unicos

@@ -24,7 +24,7 @@ def pregunta_12():
     38   38                    eee:0,fff:9,iii:2
     39   39                    ggg:3,hhh:8,jjj:5
     """
-    df = pd.read_csv(r"files\input\tbl2.tsv", sep="\t", encoding="utf-8")
+    df = pd.read_csv(r"files/input/tbl2.tsv", sep="\t", encoding="utf-8")
     df["c5"] = df["c5a"] + ":" + df["c5b"].astype(str)
     tabla = df.groupby("c0")["c5"].apply(lambda x: ",".join(sorted(x))).reset_index()
     return tabla

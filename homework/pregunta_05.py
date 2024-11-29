@@ -22,6 +22,6 @@ def pregunta_05():
     E    9
     Name: c2, dtype: int64
     """
-    df = pd.read_csv(r"files\input\tbl0.tsv", sep="\t", encoding="utf-8")
+    df = pd.read_csv(r"files/input/tbl0.tsv", sep="\t", encoding="utf-8")
     maximos = df.groupby("c1")["c2"].max()
     return maximos
