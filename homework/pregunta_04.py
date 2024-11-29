@@ -5,6 +5,8 @@ datos requeridos se encuentran en los archivos `tbl0.tsv`, `tbl1.tsv` y
 librerias de pandas para resolver las preguntas.
 """
 
+import pandas as pd
+
 
 def pregunta_04():
     """
@@ -20,3 +22,6 @@ def pregunta_04():
     E    4.785714
     Name: c2, dtype: float64
     """
+    df = pd.read_csv(r"files\input\tbl0.tsv", sep="\t", encoding="utf-8")
+    promedios = df.groupby("c1")["c2"].mean()
+    return promedios
